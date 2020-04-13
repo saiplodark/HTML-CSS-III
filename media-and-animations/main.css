@@ -1,0 +1,66 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 200px;
+    width: 900px;
+    background-color: chartreuse;
+    animation-name: zoom;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom{
+    0%{
+        background-size: 100%;
+    }
+    50%{
+        background-size: 300%;
+        background-position: -750px -20px;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media(max-width:1100px) and (min-width:901px){
+    .box{
+        width: 800px;
+        height: 500px;
+        background-size: 100%;
+        background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2013/03/05/48252/c08d39a933bcc86eee94c12d5b06c4d8-1000.jpg');
+    }
+}
+
+@media(max-width:900px) and (min-width:801px){
+    .box{
+        width: 600px;
+        background-color: fuchsia;
+        animation-name: spinner;
+        animation-timing-function: ease-out;
+        animation-duration: 1s;
+    }
+}
+
+@media(max-width:800px){
+    .box{
+        width:500px;
+        background-color:coral;
+    }
+}
